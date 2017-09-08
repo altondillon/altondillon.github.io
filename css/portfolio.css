@@ -17,8 +17,8 @@ header {
 
 /* navigation menu */
 nav {
-    border-radius: 25px;
-    background: #053582;
+    border-radius: 50px;
+    background: #214277;
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
@@ -66,4 +66,24 @@ main {
 }
 .interest header {
     font-size: 1.25em;
+}
+#portfolio {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#portfolio li {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+    background: #eee;
+} 
+
+#portfolio a {
+    text-decoration: none;
+    color: #454545;
 }
