@@ -15,14 +15,13 @@
 			height: 70px;
 			top: 100px;
 			left: 0px;
-			background-color: gray;
+			background-color: teal;
 			font-size: 300%;
 			text-align: center;
 			border-radius: 50%;
 		}
-		.board {
-			background-color: #000;
-			color: white;
+		body {
+			background-color: black;
 		}
 	</style>
 
@@ -52,11 +51,13 @@
 			var color;
 			var randomHPos;
 			var randomVPos;
+	//		var mouseXPos = event.clientX;
+	//		var mouseYPos = event.clientY;
 
 			// jQuery stuff setup for you
 			box = $('.box');
-			boardWidth = $(window).width() - box.width();
-			boardHeight = $(window).height() - box.height();
+			boardWidth = $(window).width();
+			boardHeight = $(window).height();
 
 
 			// TODO 2
@@ -112,18 +113,19 @@
 			handleBoxClick = function() {
 				randomHPos = Math.floor(Math.random() * boardWidth);
 				randomVPos = Math.floor(Math.random() * boardHeight);	
-				speed += 3;
+				speed += 1;
 				hPosition = randomHPos;
 				vPosition = randomVPos; 
 				points += 1;
 				;
 				box.css('background-color', colorChange());
+				//console.log(mouseXPos + "and" + mouseYPos);
 			};
 			
 
 			
 			//this calls update every 50 milliseconds
-			setInterval(update, 25);
+			setInterval(update, 10);
 			// this calls the handle handleBoxClick function every time the box is clicked on
 			box.on('click', handleBoxClick);
 		})()
