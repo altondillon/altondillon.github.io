@@ -91,23 +91,20 @@
                         
                         if ( circle.x > canvas.width + circle.radius ) {
                             // your code to place circle exactly off the stage at the left-side //
-                             circle.x = 0;
-                            physikz.updatePosition(circle);
-                            
-                        } else if ( circle.x < 0 + circle.radius ) {
+                             circle.x = 0 - circle.radius;
+                    
+                        } else if ( circle.x < 0 - circle.radius ) {
                             // your code to place circle exactly off the stage at the right-side //
-                             circle.x = canvas.width;
-                            physikz.updatePosition(circle);
+                             circle.x = canvas.width + circle.radius;
                         }
                         
-                        if ( circle.y < 0 + circle.radius ) {
+                        if ( circle.y < 0 - circle.radius ) {
                             // code to place circle exactly off the stage at the bottom //
-                             circle.y = canvas.height;
-                            physikz.updatePosition(circle);
+                             circle.y = canvas.height + circle.radius;
+                            
                         } else if ( circle.y > canvas.height + circle.radius ) {
                             // your code to place circle exactly off the stage at the top //
-                             circle.y = 0;
-                             physikz.updatePosition(circle);
+                             circle.y = 0 - circle.radius;
                         }
                         
                         // YOUR TODO 6 CODE ENDS HERE //////////////////////////

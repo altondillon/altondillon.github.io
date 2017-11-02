@@ -50,6 +50,7 @@ main {
     background: #c9ddff;
     border-radius: 25px;
     display: flex;
+    margin-bottom: 10px;
 }
 .sidebar {
     margin-right: 25px;
@@ -66,4 +67,10 @@ main {
 }
 .interest header {
     font-size: 1.25em;
+}
+.container2  {
+    padding: 30px;
+    background: #c9ddff;
+    border-radius: 25px;
+    display: flex;
 }

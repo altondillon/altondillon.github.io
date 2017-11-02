@@ -6,6 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+               $("button").click(function() {
+                    $("ul.professional-interests").toggle();  
+               });
+            });
+        </script>
     </head>
     
     <body>
@@ -28,9 +36,23 @@
                     <section class="interests">
                         <header>Interests</header>
                         <ul>
-                            <li>Web Development</li>
+                            <li>Ultimate Frisbee</li>
                             <li>YouTube</li>
                             <li>Spikeball</li>
+                        </ul>
+                    </section>
+                </div>
+            </main>
+            <br>
+            <main class="container2">
+                <div class="professional-content">
+                    <header>Professional Interests</header>
+                    <section class="interests">
+                        <button>Use me to see my professional interests</button>
+                        <ul class="professional-interests">
+                            <li>Web Development</li>
+                            <li>Application Development</li>
+                            <li>Photography</li>
                         </ul>
                     </section>
                 </div>
