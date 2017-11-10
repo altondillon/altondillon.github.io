@@ -25,7 +25,7 @@
             /*override default styles here*/
         </style>
     </head>
-    <body>
+    <body style="background-color: #000;">
         <div>
             <canvas id="canvas" width="500" height="500"></canvas>
         </div>
@@ -40,7 +40,7 @@
                     app = window.opspark.makeApp({update: update}),
                     canvas = app.canvas, 
                     view = app.view,
-                    fps = draw.fps('#000');
+                    fps = draw.fps('#fff');
                 
                 ////////////////////////////////////////////////////////////////
                 // ALL CODE GOES BELOW HERE                                   //
@@ -59,13 +59,13 @@
                  */
                 for (i = 0; i <= 100; i++) {
                     // TODO 3 : YOUR CODE STARTS HERE //////////////////////////
-                    circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+                    circle = draw.randomCircleInArea(canvas, false, false, '#ffffff', 2);
                     
                     if (circle.alpha < .2) {
                     	draw.blurFilterOn(circle);
                     }
                     
-                    physikz.addRandomVelocity(circle, canvas);
+                    physikz.addRandomVelocity(circle, canvas, 5, 5);
                     circles.push(circle);
                     view.addChild(circle);
                     
@@ -89,16 +89,16 @@
                         
                         // TODO 6 : YOUR CODE STARTS HERE //////////////////////
                         
-                        if ( circle.x > canvas.width + circle.radius ) {
+                        if ( circle.x > canvas.width + circle.radius) {
                             // your code to place circle exactly off the stage at the left-side //
                              circle.x = 0 - circle.radius;
                     
-                        } else if ( circle.x < 0 - circle.radius ) {
+                        } else if ( circle.x < 0 - circle.radius) {
                             // your code to place circle exactly off the stage at the right-side //
                              circle.x = canvas.width + circle.radius;
                         }
                         
-                        if ( circle.y < 0 - circle.radius ) {
+                        if ( circle.y < 0 - circle.radius) {
                             // code to place circle exactly off the stage at the bottom //
                              circle.y = canvas.height + circle.radius;
                             
