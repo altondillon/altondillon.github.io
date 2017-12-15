@@ -18,7 +18,7 @@
         <script src="js/lib/proton-1.0.0.min.js"></script>
         <script src="bower_components/easeljs/lib/easeljs-0.8.2.min.js"></script>
         <script src="bower_components/PreloadJS/lib/preloadjs-0.6.2.min.js"></script>
-        <script src="bower_components/TweenJS/lib/tweenjs-0.6.2.min.js"></script>
+        <script src="bower_components/TweenJS/lib/tweenjs.min.js"></script>
         <script src="bower_components/SoundJS/lib/soundjs-0.6.2.min.js"></script>
         <script src="bower_components/opspark-draw/draw.js"></script>
         <script src="bower_components/racket/racket.js"></script>
@@ -42,8 +42,8 @@
        <!-- add any additional scripts here -->
         <script src="js/view/hud.js"></script>
         <script src="js/view/background.js"></script>
+        <script src="js/level01.js"></script>
         <style type="text/css">
-            /*override default styles here*/
         </style>
     </head>
     <body>
@@ -78,7 +78,7 @@
                     particleManager;
                 
                 var debugHalleHitZones = false;
-
+                
                 space = app.space;
                 rules = app.rules,
                 particleManager = opspark.makeParticleManager(app.stage);
@@ -129,7 +129,8 @@
                 view.addChild(hud);
                 window.hud = hud;
                 // TODO 3 : create game manager
-
+                var game = opspark.createGameManager(app,hud);
+                opspark.runLevelInGame(game);
             })();
         </script>
     </body>

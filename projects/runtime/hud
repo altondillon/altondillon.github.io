@@ -1,0 +1,12 @@
+add <script src="js/view/hud.js"></script> to index.html
+add var hud = opspark.makeHud();
+    view.addChild(hud);
+    at the location of todo 1 in index.html
+add window.hud = hud; after the previous code
+Open up the console in Chrome Developer Tools
+type out each of these statements:
+    hud.updateScore(10);
+    hud.updateOf(1000);
+    hud.setIntegrity(25);
+    hud.setIntegrity(100);
+    hud.kill();

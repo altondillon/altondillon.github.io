@@ -60,10 +60,11 @@
                 for (i = 0; i <= 100; i++) {
                     // TODO 3 : YOUR CODE STARTS HERE //////////////////////////
                     circle = draw.randomCircleInArea(canvas, false, false, '#ffffff', 2);
+                    circle.alpha = 0.5;
                     
-                    if (circle.alpha < .2) {
-                    	draw.blurFilterOn(circle);
-                    }
+                    // if (circle.alpha < ) {
+                    // 	draw.blurFilterOn(circle);
+                    // }
                     
                     physikz.addRandomVelocity(circle, canvas, 5, 5);
                     circles.push(circle);

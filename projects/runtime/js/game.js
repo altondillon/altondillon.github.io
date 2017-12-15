@@ -3,7 +3,7 @@
 
     var physikz = window.opspark.racket.physikz;
     var draw = window.opspark.draw;
-    var createjs = window.createjs;
+    var js = window.createjs;
 
     window.opspark.createGameManager = function(app,hud) {
         var score = 0;
@@ -58,7 +58,6 @@
 
         hud.setIntegrity(100);
         hud.updateOf(10000);
-        
         /* Create a new game item of the given type and hit radius. Each game
            item is a empty createjs container. To draw something for a game item
            create shapes and/or bitmaps and add them to container via addChild()
@@ -136,7 +135,7 @@
                duration is in milliseconds 
             */
             body.shrink = function(duration) {
-                duration = duration || 100;
+                duration = duration || 1000;
                 removeFromSpace(body);
                 createjs.Tween.get(body).to({scaleX: 0, scaleY: 0}, duration).call(function() {
                     removeGameItem(body);
@@ -197,6 +196,7 @@
         function createObstacle(radius,damage) {
             var gameItem = createGameItem('obstacle',radius);
             gameItem.velocityX = -2;
+            
 
             gameItem.onPlayerCollision = function() {
                 changeIntegrity(-damage);
